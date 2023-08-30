@@ -17,7 +17,8 @@
     "pods": "cd example && npx pod-install",
     "bootstrap": "yarpm example && yarpm && yarpm pods",
     "predeploy": "yarpm example build:web",
-    "deploy": "gh-pages -d example/web-build"
+    "deploy": "gh-pages -d example/web-build",
+    "postinstall": "patch-package"
   },
   "keywords": [
     "react-native",
@@ -58,6 +59,7 @@
     "husky": "^7.0.0",
     "jest": "^27.0.6",
     "metro-react-native-babel-preset": "^0.66.0",
+    "patch-package": "^8.0.0",
     "prettier": "^2.3.0",
     "react": "^17.0.2",
     "react-native": "^0.68.0",

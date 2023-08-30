@@ -1,0 +1,13 @@
+diff --git a/node_modules/expo-module-scripts/bin/npx b/node_modules/expo-module-scripts/bin/npx
+index a6db9a3..5d95bd4 100755
+--- a/node_modules/expo-module-scripts/bin/npx
++++ b/node_modules/expo-module-scripts/bin/npx
+@@ -4,7 +4,7 @@
+ # Yarn and npm.
+ 
+ # shellcheck disable=SC2154
+-if [[ ! "$npm_config_user_agent" =~ yarn ]]; then
++if [[ ! "$npm_config_user_agent" =~ yarn ]] && [ -x "$(command -v yarn)" ]; then
+   yarn exec --silent -- npx "$@"
+ else
+   npx "$@"
