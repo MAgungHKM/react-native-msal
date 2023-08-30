@@ -13,10 +13,10 @@
     "prepare": "expo-module prepare && husky install",
     "prepublishOnly": "expo-module prepublishOnly",
     "test": "expo-module test",
-    "example": "yarn --cwd example",
+    "example": "$npm_execpath --cwd example",
     "pods": "cd example && npx pod-install",
-    "bootstrap": "yarn example && yarn && yarn pods",
-    "predeploy": "yarn example build:web",
+    "bootstrap": "$npm_execpath example && $npm_execpath && $npm_execpath pods",
+    "predeploy": "$npm_execpath example build:web",
     "deploy": "gh-pages -d example/web-build"
   },
   "keywords": [
