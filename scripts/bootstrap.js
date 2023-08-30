@@ -15,10 +15,10 @@ let result;
 if (process.cwd() !== root || args.length) {
   // We're not in the root of the project, or additional arguments were passed
   // In this case, forward the command to `yarn`
-  result = child_process.spawnSync('$npm_execpath', args, options);
+  result = child_process.spawnSync('yarpm', args, options);
 } else {
   // If `yarn` is run without arguments, perform bootstrap
-  result = child_process.spawnSync('$npm_execpath', ['bootstrap'], options);
+  result = child_process.spawnSync('yarpm', ['bootstrap'], options);
 }
 
 process.exitCode = result.status;

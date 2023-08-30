@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-$npm_execpath lint && $npm_execpath expo-module tsc --noEmit
+npm run lint && npm run expo-module tsc --noEmit
